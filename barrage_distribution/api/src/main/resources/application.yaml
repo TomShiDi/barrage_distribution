@@ -1,0 +1,51 @@
+spring:
+
+  cache:
+    type: redis
+#    ehcache:
+#      config: classpath:ehcache.xml
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+
+  datasource:
+    url: jdbc:mysql://localhost/barrage_site?characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2b8
+    username: root
+    password: 15576123138
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+      database: 0
+      host: localhost
+      port: 6379
+#  ssl:
+#    key-store: classpath:gornix.jks
+#    key-store-type: JKS
+#    key-password: 654321
+#    key-alias: gornix
+
+
+mail:
+  from: TomShiDi<${spring.mail.username}>
+
+bilibiliApiUrl: https://api.bilibili.com/x/v2/reply
+
+filePath: D:/bilibiliComment
+
+allowedOrigin: https://selltom.mynatapp.cc
+
+ipRecordFilePath: D://barrage-site-visitor.txt
+
+defaultScannedPackage: barrage.demo
+
+register-topic: topic_register
+
+auth-url: http://127.0.0.1:8080/register/activate
+
+index-url: http://localhost:8080/
+
+login:
+  userKey: tomshidi/
+

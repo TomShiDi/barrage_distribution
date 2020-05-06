@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content=="IE=edge"/>
+    <!--<meta name="google" value="notranslate"/>-->
+    <!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link type="text/css" href="css/panSearchStyle.css?t=1.0.13" rel="stylesheet">
+    <link type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+          rel="stylesheet">
+    <title>search</title>
+</head>
+<body>
+<div class="body">
+    <div class="search-tool">
+            <span class="search-input-area">
+                <!--<i class="fa fa-search fa-lg"></i>-->
+                <input class="search-input" type="text" placeholder="请输入搜索内容">
+            </span>
+        <span class="search-button-area">
+                <input class="search-button" type="button" value="搜索一下" onclick="buttonClick()">
+            </span>
+
+    </div>
+    <div class="search-content-area">
+        <div class="search-content">
+            <!--<div class="search-item">-->
+            <!--<a href="#" class="search-item-name" target="_blank">11 11 - 11 11 - EP [iT].zip</a>-->
+            <!--<span class="search-item-info">文件数: 1,分享时间: 2016-11-29T19:31:46.939000, 文件大小: 1k</span>-->
+            <!--<span class="search-item-url">https://pan.baidu.com/s/1boExy5h</span>-->
+            <!--</div>-->
+
+        </div>
+    </div>
+
+    <div class="pageNav">
+        <ul id="pageNavList">
+            <li>
+                <button class="prePageButton" disabled id="prePageButton" onclick="preButtonClick()">上一页</button>
+            </li>
+            <li>
+                <button class="pageButton" disabled id="min-page" onclick="minPageButtonClick()">1</button>
+            </li>
+            <li>
+                ......
+            </li>
+            <li>
+                <button class="pageButton" disabled id="page-1" onclick="pageButtonClick(this)">1</button>
+            </li>
+            <li>
+                <button class="pageButton" disabled id="page-2" onclick="pageButtonClick(this)">2</button>
+            </li>
+            <li>
+                <button class="pageButton" disabled id="page-3" onclick="pageButtonClick(this)">3</button>
+            </li>
+            <li>
+                <button class="pageButton" disabled id="page-4" onclick="pageButtonClick(this)">4</button>
+            </li>
+            <li>
+                <button class="pageButton" disabled id="page-5" onclick="pageButtonClick(this)">5</button>
+            </li>
+            <li>
+                ......
+            </li>
+            <li>
+                <button class="pageButton" disabled id="max-page" onclick="maxPageButtonClick()">5</button>
+            </li>
+            <li>
+                <button class="nextPageButton" disabled id="nextPageButton" onclick="nextButtonClick()">下一页</button>
+            </li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript" src="script/jquery.min.js" rel="script"></script>
+<script type="text/javascript" src="script/panSearch-pro.js?t=1.0.0"></script>
+<script type="text/javascript" src="script/pageNav-pro.js?t=1.0.0"></script>
+</body>
+</html>

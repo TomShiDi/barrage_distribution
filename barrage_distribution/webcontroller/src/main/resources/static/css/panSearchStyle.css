@@ -1,0 +1,336 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.fa {
+    display: inline-block;
+    width: auto;
+}
+
+.body {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.search-tool {
+    position: relative;
+    top: 3%;
+    width: 80%;
+    height: 8%;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.search-input-area {
+    width: 60%;
+    height: 50%;
+    /*margin-right: 4px;*/
+    overflow: hidden;
+}
+
+@media screen and (min-device-width: 1920px)and (min-device-height: 1080px) {
+    .search-input {
+        /*outline: none;*/
+        /*border: none;*/
+        width: 99%;
+        height: 90%;
+        font-size: 20px;
+        padding-left: 1%;
+    }
+
+    .search-button-area {
+        width: 12%;
+        height: 50%;
+    }
+
+    .search-button {
+        outline: none;
+        width: 100%;
+        height: 99%;
+        background: #3385ff;
+        border-bottom: #2d78f4;
+        font-size: 20px;
+        /*outline: medium;*/
+        border: none;
+        -webkit-appearance: none;
+        cursor: pointer;
+
+    }
+
+    .search-content-area {
+        position: relative;
+        top: 0%;
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+        align-items: center;
+        align-content: stretch;
+        flex-wrap: wrap;
+        height: 70%;
+        width: 80%;
+        margin: 0 1% 0 1%;
+    }
+
+    .search-content {
+        /*display: flex;*/
+        /*display: -webkit-flex;*/
+        /*justify-content: center;*/
+        /*align-items: center;*/
+        /*align-content: stretch;*/
+        /*flex-wrap: wrap;*/
+        position: relative;
+        top: 2%;
+        /*left: 10%;*/
+        height: 100%;
+        width: 70%;
+        margin: 0 1% 0 1%;
+    }
+
+    .search-item {
+        position: relative;
+        /*top: 4%;*/
+        /*margin-top: 1.5%;*/
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 8%;
+        /*width: 100%;*/
+        overflow: hidden;
+    }
+
+    .search-item-name {
+        width: 100%;
+        font-size: 17px;
+    }
+
+    .search-item-info {
+        width: 100%;
+        font-size: 9px;
+    }
+
+    .search-item-url {
+        width: 100%;
+        font-size: 15px;
+        color: #008000;
+    }
+
+    .pageNav {
+        position: relative;
+        top: 0%;
+        width: 100%;
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+    }
+
+    .pageNav ul {
+        list-style-type: none;
+    }
+
+    .pageNav ul li {
+        float: left;
+
+    }
+
+    .pageButton {
+        width: 30px;
+        height: 30px;
+        border: solid 1px rgba(149, 149, 149, 0.7);
+        background: rgba(255, 255, 255, 0.11);
+        /*color: rgb(149, 149, 149);*/
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 0 5px 0 5px;
+    }
+
+    .prePageButton {
+        height: 30px;
+        border: solid 1px rgba(149, 149, 149, 0.71);
+        background: rgba(255, 255, 255, 0.11);
+        cursor: pointer;
+        border-radius: 5px;
+
+    }
+
+    .nextPageButton {
+        height: 30px;
+        border: solid 1px rgba(149, 149, 149, 0.7);
+        background: rgba(255, 255, 255, 0.11);
+        cursor: pointer;
+        border-radius: 5px;
+        /*background: #3385ff;*/
+        /*font-size: 13px;*/
+    }
+
+    .button-current {
+        background: #3385ff;
+        cursor: not-allowed;
+    }
+
+    button:focus {
+        outline: rgba(255, 255, 255, 0) none;
+    }
+}
+
+@media screen and (max-device-width: 481px) and (max-device-height: 700px) {
+    .search-input {
+        /*outline: none;*/
+        /*border: none;*/
+        width: 99%;
+        height: 90%;
+        font-size: 2.3vw;
+        padding-left: 1%;
+    }
+
+    .search-button-area {
+        width: 15%;
+        height: 50%;
+    }
+
+    .search-button {
+        outline: none;
+        width: 100%;
+        height: 99%;
+        background: #3385ff;
+        border-bottom: #2d78f4;
+        font-size: 2.3vw;
+        /*outline: medium;*/
+        border: none;
+        -webkit-appearance: none;
+        cursor: pointer;
+
+    }
+
+    .search-content-area {
+        position: relative;
+        top: 0%;
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+        align-items: center;
+        align-content: stretch;
+        flex-wrap: wrap;
+        height: 70%;
+        width: 80%;
+        margin: 0 1% 0 1%;
+    }
+
+    .search-content {
+        /*display: flex;*/
+        /*display: -webkit-flex;*/
+        /*justify-content: center;*/
+        /*align-items: center;*/
+        /*align-content: stretch;*/
+        /*flex-wrap: wrap;*/
+        position: relative;
+        top: 2%;
+        /*left: 10%;*/
+        height: 100%;
+        width: 70%;
+        margin: 0 1% 0 1%;
+    }
+
+    .search-item {
+        position: relative;
+        /*top: 4%;*/
+        /*margin-top: 1.5%;*/
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 8%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .search-item-name {
+        width: 100%;
+        font-size: 1.3vw;
+    }
+
+    .search-item-info {
+        width: 100%;
+        font-size: 1.0vw;
+    }
+
+    .search-item-url {
+        width: 100%;
+        font-size: 1.2vw;
+        color: #008000;
+    }
+
+    .pageNav {
+        position: relative;
+        top: 0%;
+        width: 100%;
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+    }
+
+    .ul#pageNavList {
+        list-style: none none;
+    }
+
+    .pageNav ul li {
+        float: left;
+        line-height: 1.8vh;
+        list-style-type: none;
+    }
+
+    .pageButton {
+        width: calc(4.0vw);
+        height: calc(4.0vh);
+        border: solid 1px rgba(149, 149, 149, 0.7);
+        background: rgba(255, 255, 255, 0.11);
+        /*color: rgb(149, 149, 149);*/
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 0 5px 0 5px;
+    }
+
+    .prePageButton {
+        height: calc(2.8vh);
+        border: solid 1px rgba(149, 149, 149, 0.71);
+        background: rgba(255, 255, 255, 0.11);
+        cursor: pointer;
+        border-radius: 5px;
+
+    }
+
+    .nextPageButton {
+        height: calc(2.8vh);
+        border: solid 1px rgba(149, 149, 149, 0.7);
+        background: rgba(255, 255, 255, 0.11);
+        cursor: pointer;
+        border-radius: 5px;
+        /*background: #3385ff;*/
+        /*font-size: 13px;*/
+    }
+
+    .button-current {
+        background: #3385ff;
+        cursor: not-allowed;
+    }
+
+    button:focus {
+        outline: rgba(255, 255, 255, 0) none;
+    }
+}

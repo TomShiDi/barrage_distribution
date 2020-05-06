@@ -1,0 +1,31 @@
+<!--<?xml version="1.0" encoding="UTF-8" ?>-->
+<!--<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >-->
+<!--<mapper namespace="barrage.demo.mapper.DepartmentLogInfoMapper">-->
+<!--<resultMap id="BaseResultMap" type="barrage.demo.barrageapi.entity.DepartmentLogInfo">-->
+<!--&lt;!&ndash;-->
+<!--WARNING - @mbg.generated-->
+<!--&ndash;&gt;-->
+<!--<id column="table_id" property="tableId" jdbcType="INTEGER"/>-->
+<!--<result column="department_id" property="departmentId" jdbcType="INTEGER"/>-->
+<!--<result column="operator_id" property="operatorId" jdbcType="INTEGER"/>-->
+<!--<result column="operation_type" property="operationType" jdbcType="VARCHAR"/>-->
+<!--<result column="operation_content" property="operationContent" jdbcType="VARCHAR"/>-->
+<!--<result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>-->
+<!--<result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>-->
+<!--</resultMap>-->
+
+<!--<select id="selectAllPageable" resultMap="BaseResultMap">-->
+<!--<bind name="index_calc" value="((index-1)*pageSize)"/>-->
+<!--select * from department_log_info limit #{index_calc},#{pageSize}-->
+<!--</select>-->
+
+<!--<select id="findByDepartmentId" resultMap="BaseResultMap">-->
+<!--<bind name="index_calc" value="((index-1)*pageSize)"/>-->
+<!--select * from department_log_info where department_id = #{departmentId} limit #{index_calc},#{pageSize}-->
+<!--</select>-->
+
+<!--<select id="findByOperatorId" resultMap="BaseResultMap">-->
+<!--<bind name="index_calc" value="((index-1)*pageSize)"/>-->
+<!--select * from department_log_info where operator_id = #{operatorId} limit #{index_calc},#{pageSize}-->
+<!--</select>-->
+<!--</mapper>-->

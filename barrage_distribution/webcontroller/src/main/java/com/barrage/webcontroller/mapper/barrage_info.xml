@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="barrage.demo.mapper.BarrageInfoMapper">
+
+    <resultMap id="barrageInfoResultMap" type="barrage.demo.barrageapi.entity.BarrageInfo">
+        <id property="barrageId" column="barrage_id" javaType="Integer" jdbcType="INTEGER"/>
+        <result property="barrageSenderId" column="barrage_sender_id" javaType="Integer" jdbcType="INTEGER"/>
+        <result property="content" column="content" javaType="String" jdbcType="VARCHAR"/>
+        <result property="starNum" column="star_num" javaType="Integer" jdbcType="INTEGER"/>
+        <result property="speed" column="speed" javaType="Integer" jdbcType="INTEGER"/>
+        <result property="color" column="color" javaType="String" jdbcType="VARCHAR"/>
+        <result property="textSize" column="text_size" javaType="Integer" jdbcType="INTEGER"/>
+        <result property="road" column="road" javaType="Integer" jdbcType="INTEGER"/>
+        <result property="barrageSendTime" column="barrage_send_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <select id="findByBarrageId" parameterType="int" resultMap="barrageInfoResultMap">
+        select * from barrage_info where barrage_id = #{id}
+    </select>
+
+    <select id="findBySenderId" parameterType="int" resultMap="barrageInfoResultMap">
+        select * from barrage_info where barrage_sender_id = #{senderId}
+    </select>
+
+    <select id="getBarragePageByIndex" resultMap="barrageInfoResultMap">
+        <bind name="index_calc" value="(index-1)*pageSize"/>
+        select * from barrage_info limit #{index_calc},#{pageSize}
+    </select>
+
+    <insert id="saveBarrageInfo" parameterType="barrage.demo.barrageapi.entity.BarrageInfo" keyProperty="barrageId"
+            useGeneratedKeys="true">
+        insert into barrage_info value (null
+        ,#{barrageSenderId},#{content},#{speed},#{color},#{textSize},#{starNum},null,#{road})
+    </insert>
+    <!--update barrage_info set barrage_id=#{barrageId},barrage_sender_id=#{barrageSenderId},content = #{content},speed=#{speed},color = #{color},text_size = #{textSize},star_num = #{starNum},barrage_send_time = #{barrageSendTime},road = #{road} where barrage_id=#{barrageId}-->
+    <!--barrage_id=values (barrage_id),barrage_sender_id= values (barrage_sender_id),content = values(content),speed=values(speed),color = values(color),text_size = values(text_size),star_num = values(star_num),barrage_send_time = values(barrage_send_time),road = values(road)-->
+    <update id="update" parameterType="barrage.demo.barrageapi.entity.BarrageInfo">
+        insert into barrage_info values (#{barrageId}
+        ,#{barrageSenderId},#{content},#{speed},#{color},#{textSize},#{starNum},#{barrageSendTime},#{road}) on duplicate
+        key update
+        barrage_id=#{barrageId},barrage_sender_id=#{barrageSenderId},content = #{content},speed=#{speed},color =
+        #{color},text_size = #{textSize},star_num = #{starNum},barrage_send_time = #{barrageSendTime},road = #{road}
+    </update>
+</mapper>

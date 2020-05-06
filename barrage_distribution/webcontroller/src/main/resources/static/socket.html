@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Socket Test</title>
+    <link href="css/socketTest.css?v=1.0.8" rel="stylesheet"/>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="body">
+    <!--<div class="setting">-->
+    <!--<input class="connectButton" type="button" value="connect socket">-->
+    <!--</div>-->
+    <!--以下是页面的显示区域-->
+    <div class="content">
+        <!--标题部分-->
+        <div class="content-title">
+            <span class="onlineCount" style="color: #3d3d3d">在线人数               <i
+                    class="fa fa-spinner fa-spin"></i></span>
+            <span id="onlineCount" class="onlineCount" style="color: #3c8b3c">0</span>
+        </div>
+        <!--气泡消息区域-->
+        <div class="content-body">
+            <!--<div class="message-content-father">-->
+            <!--<div class="message-content-nickName you">TomShiDi</div>-->
+            <!--<div class="message-content you">-->
+            <!--快速”和“简单”并不用产生维护性或性能上的问题。Netty-->
+            <!--是一个吸收了多种协议的实现经验，这些协议包括FTP,SMTP,HTTP，各种二进制，文本协议，并经过相当精心设计的项目，-->
+            <!--最终，Netty 成功的找到了一种方式，在保证易于开发的同时还保证了其应用的性能，稳定性和伸缩性。——百度百科-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="message-content-father">-->
+            <!--<div class="message-content mine">-->
+            <!--Hello World-->
+            <!--</div>-->
+            <!--</div>-->
+        </div>
+    </div>
+    <!--文字输入区域-->
+    <div class="input-area">
+        <div class="input-message">
+            <input class="input-field" type="text" placeholder="来啊，造作啊">
+        </div>
+        <div class="input-button">
+            <div class="emoji-icon">
+                <i class="fa fa-smile-o" aria-hidden="true"></i>
+            </div>
+            <div class="send-button-area">
+                <i class="fa fa-space-shuttle fa-rotate-180"></i>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--用户输入登录名的弹窗视图-->
+<div class="signWindow">
+    <div class="window-box">
+        <div class="name-input-field">
+            <div>
+                <input id="name-input" type="text" placeholder="随便取个名字吧" maxlength="32">
+            </div>
+        </div>
+        <div class="option-button-area">
+            <div>
+                <input id="login-button" type="button" value="登录">
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="script/jquery.min.js"></script>
+<script type="text/javascript" src="script/socketScript.js?v=1.0.13"></script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>注册</title>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <style type="text/css" rel="stylesheet">
+        * {
+            margin: 0;
+            padding: 0;
+            /*box-sizing: border-box;*/
+        }
+
+        html, body {
+            background-color: #f4f6f9;
+            font-size: 14px;
+            font-weight: 400;
+            font-family: "Nunito", "Segoe UI", arial;
+            color: #6c757d;
+        }
+
+        .app {
+            width: 100%;
+            margin-top: 8%;
+        }
+
+        .card {
+            display: flex;
+            /*justify-content: center;*/
+            /*align-items: center;*/
+            /*flex-wrap: wrap;*/
+
+            min-width: 0;
+            flex-direction: column;
+            background-clip: border-box;
+            -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+            -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+            background-color: #ffffff;
+            position: relative;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .card-primary {
+            border-top: 2px solid #6777ef;
+        }
+
+        .card-header {
+            border-bottom-color: #F9F9F9;
+            line-height: 30px;
+            align-self: center;
+            width: 100%;
+            min-width: 70px;
+            /*display: flex;*/
+            align-items: center;
+            padding: 15px 25px;
+        }
+
+        .card .card-header h4 {
+            font-size: 16px;
+            line-height: 28px;
+            color: #6777ef;
+            padding-right: 10px;
+            margin-bottom: 0;
+        }
+
+        .card-body {
+            /*padding-top: 20px;*/
+            /*padding-bottom: 20px;*/
+            padding: 20px 25px;
+            flex: 1 1 auto;
+        }
+
+        .form-group > label {
+            font-weight: 600;
+            color: #34395e;
+            font-size: 12px;
+            letter-spacing: .5px;
+        }
+
+        .invalid-message {
+            display: none;
+            width: 100%;
+            margin-top: .25em;
+            font-size: 80%;
+            color: #dc3545;
+        }
+
+        .shadow-light {
+            box-shadow: 0 2px 6px #e6ecf1;
+        }
+
+        .logo-area {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .circle {
+            border-radius: 20px;
+            border: none;
+        }
+
+        .simple-footer {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="app">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
+                <div class="logo-area">
+                    <img src="pic/logo_2.png" width="100px" class="shadow-light circle" alt="logo">
+                </div>
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h4>注册</h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="javascript:void (0)" class="needs-validation" novalidate>
+                            <div class="row">
+                                <div class="form-group col-lg-6 col-sm-12 col-xs-12">
+                                    <label for="name">昵称</label>
+                                    <input id="name" type="text" class="form-control" name="name" required autofocus>
+                                    <div class="invalid-message">
+                                        请填写昵称
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-lg-6 col-sm-12 col-xs-12">
+                                    <label for="sex">性别</label>
+                                    <div class="input-group">
+                                        <!--<input type="text" class="form-control col-7" maxlength="10" id="sex" required>-->
+                                        <select class="custom-select input-group-append col-5" id="sex"
+                                                required="" style="border-top-right-radius: .25rem;
+                          border-bottom-right-radius: .25rem;">
+                                            <option value="1" selected>男</option>
+                                            <option value="0">女</option>
+                                        </select>
+                                    </div>
+                                    <div class="invalid-message">请选择性别</div>
+                                </div>
+
+                                <div class="form-group col-lg-6 col-sm-12 col-xs-12">
+                                    <label for="email">邮箱</label>
+                                    <div class="input-group" id="group-email">
+                                        <input type="text" class="form-control col-7" maxlength="10" id="email" required>
+                                        <select class="custom-select input-group-append col-5" id="email-type"
+                                                required="" style="border-top-right-radius: .25rem;
+                          border-bottom-right-radius: .25rem;">
+                                            <option value="@qq.com" selected>@qq.com</option>
+                                        </select>
+                                    </div>
+                                    <div class="invalid-message">请填写邮箱</div>
+                                </div>
+
+                                <div class="form-group col-lg-6 col-sm-12 col-xs-12">
+                                    <label for="password">密码</label>
+                                    <input id="password" type="password" class="form-control" name="password" required>
+                                    <div class="invalid-message">
+                                        请输入密码
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-lg-6 col-sm-12 col-xs-12">
+                                    <label for="password-repeat">重复密码</label>
+                                    <input id="password-repeat" type="password" class="form-control"
+                                           name="password-repeat" required>
+                                    <div class="invalid-message">
+                                        两次密码不一致
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-lg-6 col-sm-12 col-xs-12">
+                                    <div class="custom-control custom-checkbox">
+                                        <input name="agree" type="checkbox" class="custom-control-input" id="agree"
+                                               checked="checked" required>
+                                        <label for="agree" class="custom-control-label">
+                                            注册即代表同意
+                                            <a href="#" target="_blank">服务条款</a>
+                                        </label>
+                                        <div class="invalid-message">
+                                            请阅读服务条款并勾选
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button id="btn-submit" class="btn btn-primary btn-lg btn-block" type="button">注册
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="mt-5 text-center text-muted">
+                    已经有账号了?
+                    <a href="/login.html">马上登录 👉</a>
+                </div>
+                <div class="simple-footer">
+                    Copyright © 2019 TomShiDi
+                    <div class="mt-2">
+                        Powered by
+                        <a href="#">TomShiDi</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--弹窗代码部分-->
+<div id="toast-area" style="display:none;position: absolute;top: 50%;width: 100%">
+    <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center" style="min-height: 30%;">
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="5000">
+            <div class="toast-header">
+                <!--<img src="" class="rounded mr-2" alt="提示框图标" />-->
+                <svg class="bi bi-briefcase-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" clip-rule="evenodd"></path>
+                    <path fill-rule="evenodd" d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5v1.384l-7.614 2.03a1.5 1.5 0 0 1-.772 0L0 5.884V4.5zm5-2A1.5 1.5 0 0 1 6.5 1h3A1.5 1.5 0 0 1 11 2.5V3h-1v-.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5V3H5v-.5z" clip-rule="evenodd"></path>
+                </svg>
+                <strong class="mr-auto">激活提示</strong>
+                <small>just now</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body">
+                请注意查收激活邮件
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"-->
+        <!--integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"-->
+        <!--crossorigin="anonymous"></script>-->
+<script type="text/javascript">
+    // $('#btn-submit').on('click', function (e) {
+    //     $('.toast').toast('show');
+    // });
+
+</script>
+<script src="script/register.js?t=1.0.0" type="text/javascript"></script>
+</body>
+</html>

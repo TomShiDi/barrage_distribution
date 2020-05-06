@@ -1,0 +1,15 @@
+dubbo:
+  protocol:
+    port: -1
+  application:
+    name: authoritation
+  scan:
+    base-packages: com.barrage.webcontroller
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  consumer:
+      timeout: 3000
+  provider:
+    timeout: 3000
+server:
+  port: 9100
