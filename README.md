@@ -1,0 +1,2 @@
+# barrage_distribution
+对之前的弹幕网站进行了分布式重构
