@@ -9,9 +9,13 @@ window.onload = function (e) {
         let password = $("#password").val();
 
         $.ajax({
-            url: "/auth/login",
+            url: "http://localhost:9000/auth/login",
             type: "post",
             dataType: "json",
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true,
             data: {
                 userName: userName,
                 password: password

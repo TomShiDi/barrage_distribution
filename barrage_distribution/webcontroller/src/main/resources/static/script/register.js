@@ -73,7 +73,7 @@ window.onload = function (e) {
             throw new DOMException("参数格式错误");
         }
         $.ajax({
-            url: "/register/do",
+            url: "https://localhost:9000/register/do",
             dataType: "json",
             type: "post",
             data: {

@@ -1,4 +1,5 @@
 spring:
+
   cache:
     type: redis
 #    ehcache:
@@ -29,21 +30,21 @@ spring:
 mail:
   from: TomShiDi<${spring.mail.username}>
 
-bilibiliApiUrl: https://api.bilibili.com/x/v2/reply
-
-filePath: D:/bilibiliComment
-
-allowedOrigin: https://selltom.mynatapp.cc
-
-ipRecordFilePath: D://barrage-site-visitor.txt
-
 defaultScannedPackage: barrage.demo
 
 register-topic: topic_register
 
-auth-url: http://127.0.0.1:9100/register/activate
+auth-url: http://120.77.222.242:9000/register/activate
 
-index-url: http://localhost:9100/
+index-url: http://120.77.222.242:9000/
+
+bilibiliApiUrl: https://api.bilibili.com/x/v2/reply
+
+filePath: /usr/bilibiliComment
+
+allowedOrigin: https://selltom.mynatapp.cc
+
+ipRecordFilePath: /usr/barrage-site-visitor.txt
 
 login:
   userKey: tomshidi/

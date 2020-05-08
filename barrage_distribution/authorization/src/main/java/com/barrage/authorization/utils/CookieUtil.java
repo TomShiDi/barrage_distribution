@@ -1,6 +1,7 @@
 package com.barrage.authorization.utils;
 
 import com.barrage.api.constance.CookieConstance;
+import io.netty.handler.codec.http.HttpHeaderNames;
 import org.springframework.lang.Nullable;
 
 import javax.servlet.http.Cookie;
@@ -60,10 +61,20 @@ public class CookieUtil {
     }
 
     public static void setLoginCookie(HttpServletResponse response, String email, String value) {
+        setLoginCookie(response, null, email, value);
+    }
+
+    public static void setLoginCookie(HttpServletResponse response,String origin, String email, String value) {
         Cookie cookieLk = new Cookie(CookieConstance.LOGIN_COOKIE_NAME, value);
         Cookie cookieEmail = new Cookie(CookieConstance.COOKIE_EMAIL_NAME, email);
         cookieLk.setPath("/");
         cookieEmail.setPath("/");
+        if (origin != null && !origin.isEmpty()) {
+            origin = origin.substring(origin.indexOf("//") + 2);
+            origin = origin.substring(0, origin.indexOf(":"));
+            cookieLk.setDomain("");
+            cookieEmail.setDomain("");
+        }
         cookieLk.setMaxAge(CookieConstance.MAXAGE_MS);
         cookieEmail.setMaxAge(CookieConstance.MAXAGE_MS);
         response.addCookie(cookieLk);

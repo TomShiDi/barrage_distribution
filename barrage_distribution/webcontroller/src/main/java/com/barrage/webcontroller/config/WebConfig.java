@@ -19,7 +19,6 @@ public class WebConfig implements WebMvcConfigurer {
     @Value("${filePath}")
     private String resourceLocation;
 
-
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/info/**").addResourceLocations("file:" + resourceLocation + "/");
@@ -30,5 +29,6 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("login.html");
+        System.out.println("Config执行");
     }
 }

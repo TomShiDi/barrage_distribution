@@ -7,7 +7,6 @@ import com.alipay.api.DefaultAlipayClient;
 import com.alipay.api.request.AlipayTradeWapPayRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -19,7 +18,6 @@ import static com.barrage.webcontroller.config.AliPayConfig.*;
 
 
 @Controller
-@RestController("/index")
 public class IndexController {
     @GetMapping("/index")
     public ModelAndView showIndex() {

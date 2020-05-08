@@ -36,6 +36,7 @@ import java.util.Map;
  **/
 @Controller()
 @RequestMapping("/register")
+@CrossOrigin(origins = {"https://120.77.222.242"})
 public class RegisterController {
 
     private final Logger logger = LoggerFactory.getLogger(RegisterController.class);

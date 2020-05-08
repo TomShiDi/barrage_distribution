@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,6 +34,7 @@ import javax.validation.Valid;
  **/
 @RestController
 @RequestMapping("/auth")
+@CrossOrigin(origins = {"https://120.77.222.242","http://localhost:9100"},allowCredentials = "true")
 public class AuthController {
 
     private final Logger logger = LoggerFactory.getLogger(AuthController.class);
@@ -92,7 +94,7 @@ public class AuthController {
 
 
         String loginToken = RandomKeyUtil.getUniqueUuid();
-        CookieUtil.setLoginCookie(attributes.getResponse(), loginInfoDto.getUserName(), loginToken);
+        CookieUtil.setLoginCookie(attributes.getResponse(),attributes.getRequest().getHeader("Origin"), loginInfoDto.getUserName(), loginToken);
 
 //        DigestUtils.md5Digest((userKey + userInfo.getUserPassword()).getBytes());
         defaultRedisComponent.setAsKeyValue(loginInfoDto.getUserName(), loginToken);
