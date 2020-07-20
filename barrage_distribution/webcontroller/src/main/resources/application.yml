@@ -18,12 +18,12 @@ spring:
   mail:
 #    qq邮箱配置
     host: smtp.qq.com
-    username: 2359536639@qq.com
-    password: xwfchyeomxetebag
+    username: @qq.com
+    password: 
 #      163邮箱配置
 #    host: smtp.163.com
-#    username: 18711660142@163.com
-#    password: PNXHHVADFJSKLSRZ
+#    username: 2@163.com
+#    password: RZ
     default-encoding: UTF-8
     properties:
       mail:
